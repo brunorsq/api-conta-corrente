@@ -1,0 +1,32 @@
+# Build
+bin/
+obj/
+out/
+Debug/
+Release/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Dotnet
+*.dll
+*.exe
+*.db
+*.log
+*.lock.json
+
+# Configs locais
+appsettings.Development.json
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Outros
+*.cache
+*.tmp
+*.pdb
