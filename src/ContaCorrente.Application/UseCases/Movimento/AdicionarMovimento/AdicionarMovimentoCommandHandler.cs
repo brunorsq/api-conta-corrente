@@ -47,6 +47,17 @@ namespace ContaCorrente.Application.UseCases.Movimento.AdicionarMovimento
             if (contaNumero != null && contaNumero.Numero != contaUsuario.Numero && tipoMovimento != TipoMovimentoEnum.Credito)
                 return Result<bool>.Failure("INVALID_TYPE", "Apenas o tipo “crédito” pode ser aceito caso o número da conta seja diferente do usuário logado.");
 
+            if (contaNumero != null && contaNumero.Numero != contaUsuario.Numero)
+            {
+                var movimentoNumero = await new MovimentoEntity().Create(contaNumero.IdContaCorrente, tipoMovimento, request.Valor);
+                await _movimentoRepository.CreateAsync(movimentoNumero);
+
+                var movimentoUsuario = await new MovimentoEntity().Create(contaNumero.IdContaCorrente, TipoMovimentoEnum.Debito, request.Valor);
+                await _movimentoRepository.CreateAsync(movimentoUsuario);
+                
+                return Result<bool>.Success(true);
+            }
+
             var contaMovimento = contaNumero ?? contaUsuario;
 
             var movimento = await new MovimentoEntity().Create(contaMovimento.IdContaCorrente, tipoMovimento, request.Valor);
