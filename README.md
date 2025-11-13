@@ -4,7 +4,7 @@ Aplicação para gerenciamento de Contas Correntes e suas Movimentações.
 
 ## Rodando a aplicação
 
-- Acessar a parta raiz pelo terminal;
+- Acessar a pasta raiz pelo terminal;
 - Executar "docker compose up";
 - Acessar localhost:5000/swagger/index.html;
 - Utilizar o endpoint de Autorização utilizando usuário "admin" e senha "123" para obter o bearer token e poder testar o restante dos endpoints.
