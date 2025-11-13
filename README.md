@@ -21,4 +21,5 @@ Aplicação para gerenciamento de Contas Correntes e suas Movimentações.
 ## Funcionalidades pendentes / melhorias
 
 - **Encriptação de CPF**: Atualmente os CPFs são armazenados em texto puro. É necessário implementar encriptação para aumentar a segurança dos dados sensíveis.
+- **Tabela para Usuários**: Atualmente para se autenticar é utilizado fixo usuário "admin" e senha "123". É nessario implementar uma tabela para gravar os usuários.
 - **Leitura de fila Kafka**: O processamento atual não consome mensagens da fila Kafka. A implementação dessa funcionalidade é necessária para o processamento assíncrono de eventos.
