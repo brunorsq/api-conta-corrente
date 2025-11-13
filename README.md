@@ -2,6 +2,13 @@
 
 Aplicação para gerenciamento de Contas Correntes e suas Movimentações.
 
+## Rodando a aplicação
+
+- Acessar a pasta raiz pelo terminal;
+- Executar "docker compose up";
+- Acessar localhost:5000/swagger/index.html;
+- Utilizar o endpoint de Autorização utilizando usuário "admin" e senha "123" para obter o bearer token e poder testar o restante dos endpoints.
+
 ## Funcionalidades implementadas
 
 - Autenticação.
@@ -14,4 +21,5 @@ Aplicação para gerenciamento de Contas Correntes e suas Movimentações.
 ## Funcionalidades pendentes / melhorias
 
 - **Encriptação de CPF**: Atualmente os CPFs são armazenados em texto puro. É necessário implementar encriptação para aumentar a segurança dos dados sensíveis.
+- **Tabela para Usuários**: Atualmente para se autenticar é utilizado fixo usuário "admin" e senha "123". É nessario implementar uma tabela para gravar os usuários.
 - **Leitura de fila Kafka**: O processamento atual não consome mensagens da fila Kafka. A implementação dessa funcionalidade é necessária para o processamento assíncrono de eventos.
