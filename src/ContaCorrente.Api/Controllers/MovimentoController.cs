@@ -23,7 +23,7 @@ namespace ContaCorrente.Api.Controllers
         }
 
         [HttpPost("adicionar")]
-        public async Task<IActionResult> InativarAsync([FromBody] AdicionarMovimentoRequest request, [FromHeader(Name = "Login-Token")] string token)
+        public async Task<IActionResult> AdicionarAsync([FromBody] AdicionarMovimentoRequest request, [FromHeader(Name = "Login-Token")] string token)
         {
             try
             {
